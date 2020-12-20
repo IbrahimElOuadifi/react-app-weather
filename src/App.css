@@ -1,38 +1,112 @@
+*,
+h1,
+h2,
+h5 {
+  font-weight: 300;
+  color: #fff;
+}
+
 .App {
+  position: absolute;
   text-align: center;
+  width: 600px;
+  height: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0af;
+  background-color: #0af;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+select {
+  border: none;
+  background-color: #0af;
+  border: #fff solid 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus,
+button:focus,
+select:focus {
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-bar form,
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-top: 28px;
+}
+
+.input-bar {
+  width: 100%;
+  height: 25%;
+}
+
+.input-bar form {
+  width: 100%;
+  height: 100%;
+}
+
+.input-bar input {
+  width: 480px;
+  padding: 8px 28px;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.input-bar input::placeholder {
+  color: #eeea;
+}
+
+.input-bar .options {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.input-bar .options select {
+  border-radius: 8px;
+  padding: 4px 2px;
+  font-weight: 400;
+}
+
+.content {
+  width: 100%;
+  height: 75%;
+  padding: 20px;
+}
+
+.content .weather-box {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.content .weather-box .city-country {
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content .weather-box .temp {
+  font-size: 5rem;
+}
+
+.content .weather-box .desc {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.content .weather-box .min-max {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  width: 60%;
 }
